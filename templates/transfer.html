@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="form-card">
+    <h2>Перевод средств</h2>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        <label>{{ form.recipient.label }}</label>
+        {{ form.recipient(class="input-field") }}
+
+        <label>{{ form.amount.label }}</label>
+        {{ form.amount(class="input-field") }}
+
+        <label>{{ form.description.label }}</label>
+        {{ form.description(class="input-field") }}
+
+        {{ form.submit(class="btn primary full") }}
+    </form>
+</div>
+{% endblock %}
